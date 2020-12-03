@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/user_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="159dp"
+            android:layout_marginEnd="193dp"
+            android:text="我的关键词:" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="159dp"
+            android:layout_marginEnd="144dp"
+            android:background="#928128"
+            android:text="  金融  " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="159dp"
+            android:layout_marginEnd="94dp"
+            android:background="#928128"
+            android:text="  数学  " />
+
+        <Button
+            android:id="@+id/mine_bought_courses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginEnd="17dp"
+            android:text="已购买的课程"
+            android:textSize="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="177dp"
+            android:text="王小明"
+            android:textSize="30dp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="正在学习的课程"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:background="#BABABA"
+        />
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/mine_page_course1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/teacher_homepage_course"
+        />
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/teacher_homepage_course"
+        />
+
+
+
+</LinearLayout>

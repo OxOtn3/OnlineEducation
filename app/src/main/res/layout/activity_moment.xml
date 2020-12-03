@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/moment_user_icon1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_image"
+            />
+
+        <SearchView
+            android:id="@+id/homePageSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/moment1"
+        android:src="@drawable/moment_1"
+        android:layout_marginTop="20dp"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        />
+
+    <ImageView
+        android:src="@drawable/moment_2"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        />
+
+    <ImageView
+        android:src="@drawable/moment_1"
+        android:layout_marginTop="20dp"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        />
+
+    <ImageView
+        android:src="@drawable/moment_2"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        />
+
+    <ImageView
+        android:src="@drawable/moment_1"
+        android:layout_marginTop="20dp"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        />
+
+    <ImageView
+        android:src="@drawable/moment_2"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        />
+
+
+    
+
+</LinearLayout>
+
+</ScrollView>

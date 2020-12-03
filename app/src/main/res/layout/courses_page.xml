@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/coursePageSearchView"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            />
+
+        <ImageView
+            android:id="@+id/coursePageSortIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sort_icon"
+            />
+    </LinearLayout>
+
+    <com.zhpan.bannerview.BannerViewPager
+        android:id="@+id/coursePageBannerView"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="120dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="视频"
+        android:textSize="20dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coursesPageRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        />
+
+
+
+
+
+
+</LinearLayout>

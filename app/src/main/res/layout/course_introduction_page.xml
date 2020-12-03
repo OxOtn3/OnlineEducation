@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/coursePicture"
+        android:src="@drawable/video_viewholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="课程介绍"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/courseIntroductionIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="      主讲教师：张大山\n    《财政学》：也称《政府经济学》，它是经济学中的一个分支。其研究对象是政府经济行为的规律。它主要回答政府为什么要介入人们的经济生活、是怎样介入、介入之后对人们的经济行为会产生什么样的影响以及应该怎样介入等基本问题。它通常包括基础理论、财政支出、财政收入、财政政策和财政体制等四个方面的内容。财政学是财经类专业的学生必修的专业基础课程之一。"
+        />
+
+    <Button
+        android:id="@+id/courseIntroIntoTeaHomepage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="进入教师主页"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="课程视频列表"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/chapter_one"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="第一节"
+        android:textSize="20dp"
+        android:background="#BABABA"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="第二节"
+        android:textSize="20dp"
+        android:background="#BABABA"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="讨论区"
+            android:textSize="20dp"
+            />
+
+        <Button
+            android:id="@+id/courseIntroJoinDiscussion"
+            android:layout_marginLeft="250dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="参与讨论"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/courseIntroCommentUserImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_image"
+            />
+
+        <TextView
+            android:id="@+id/courseIntroComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="        老师讲得很好！支持！老师讲得很好！支持！老师讲得很好！支持！"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/courseIntroCommentUserImage2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_image"
+            />
+
+        <TextView
+            android:id="@+id/courseIntroComment2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="        有一说一，我觉得老师讲的有点太快了，我有点跟不上老师的节奏。"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+
+</ScrollView>

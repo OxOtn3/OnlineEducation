@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_image"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="30dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="259dp"
+            android:layout_marginEnd="225dp"
+            android:background="#928128"
+            android:text="  金融  " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="259dp"
+            android:layout_marginEnd="174dp"
+            android:background="#928128"
+            android:text="  数学  " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginEnd="140dp"
+            android:text="张三 老师"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="218dp"
+            android:layout_marginEnd="37dp"
+            android:text="教师评分 4.8" />
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开设课程"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:background="#BABABA"
+        />
+
+    <ImageView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/teacher_homepage_course"
+        android:id="@+id/teacher_homepage_course1"
+
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="学生评价"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:background="#BABABA"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我要评价"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/teacherHomepageCommentUserImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_image"
+            />
+
+        <TextView
+            android:id="@+id/teacherHomepageComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="        老师讲得很好！支持！老师讲得很好！支持！老师讲得很好！支持！"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/teacherHomepageCommentUserImage2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_image"
+            />
+
+        <TextView
+            android:id="@+id/teacherHomepageComment2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="        老师讲得很好！支持！老师讲得很好！支持！老师讲得很好！支持！"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</ScrollView>

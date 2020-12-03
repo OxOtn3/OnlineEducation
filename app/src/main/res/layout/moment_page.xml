@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/momentPageUserImage"
+            android:src="@drawable/user_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="无敌小学生"
+            android:textSize="22dp"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="君不见，黄河之水天上来，奔流到海不复回。\n
+君不见，高堂明镜悲白发，朝如青丝暮成雪。\n
+人生得意须尽欢，莫使金樽空对月。\n
+天生我材必有用，千金散尽还复来。\n
+烹羊宰牛且为乐，会须一饮三百杯。\n
+岑夫子，丹丘生，将进酒，杯莫停。\n
+与君歌一曲，请君为我倾耳听。\n
+钟鼓馔玉不足贵，但愿长醉不愿醒。\n
+古来圣贤皆寂寞，惟有饮者留其名。\n
+陈王昔时宴平乐，斗酒十千恣欢谑。\n
+主人何为言少钱，径须沽取对君酌。\n
+五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。\n"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <Button
+            android:text="转发"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:text="评论"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:text="点赞"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="评论"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:background="#BABABA"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_image"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="大学生小明\n好诗！好诗！"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
