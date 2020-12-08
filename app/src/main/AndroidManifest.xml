@@ -22,9 +22,10 @@
         <activity android:name=".courseIntroductionPage.CourseIntroductionPageActivity"></activity>
         <activity android:name=".VideoPlayPage.VideoPlayActivity"></activity>
         <activity android:name=".teacherHomepage.TeacherHomepageActivity"></activity>
-        <activity android:name=".boughtCoursesPage.BoughtCoursesPageActivity"></activity>
+        <activity android:name=".mineFragmentPages.BoughtCoursesPageActivity"></activity>
         <activity android:name=".momentPage.MomentPage"></activity>
         <activity android:name=".momentUserPage.MomentUserPageActivity"></activity>
+        <activity android:name=".mineFragmentPages.CoursesOperationPage"></activity>
     </application>
 
 </manifest>

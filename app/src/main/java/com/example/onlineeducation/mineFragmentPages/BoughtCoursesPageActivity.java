@@ -1,4 +1,4 @@
-package com.example.onlineeducation.boughtCoursesPage;
+package com.example.onlineeducation.mineFragmentPages;
 
 import android.app.Activity;
 import android.content.Intent;

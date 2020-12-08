@@ -57,6 +57,19 @@
             android:text="已购买的课程"
             android:textSize="10dp" />
 
+
+        <Button
+            android:id="@+id/mine_courses_oper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="17dp"
+            android:text="课程操作(仅教师用户)"
+            android:textSize="8dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

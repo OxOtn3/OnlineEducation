@@ -1,9 +1,7 @@
 package com.example.onlineeducation;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.onlineeducation.VideoPlayPage.VideoPlayActivity;
-import com.example.onlineeducation.boughtCoursesPage.BoughtCoursesPageActivity;
+import com.example.onlineeducation.mineFragmentPages.BoughtCoursesPageActivity;
+import com.example.onlineeducation.mineFragmentPages.CoursesOperationPage;
 
 public class MineFragment extends BaseFragment{
 
@@ -28,6 +27,8 @@ public class MineFragment extends BaseFragment{
     private ImageView course1;
 
     private Button boughtCourses;
+
+    private Button coursesOperation;
 
     public MineFragment() {
         this.TAG = "我的";
@@ -46,6 +47,15 @@ public class MineFragment extends BaseFragment{
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), BoughtCoursesPageActivity.class);
                 v.getContext().startActivity(intent);
+            }
+        });
+
+        coursesOperation = (Button) mView.findViewById(R.id.mine_courses_oper);
+        coursesOperation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mView.getContext(), CoursesOperationPage.class);
+                mView.getContext().startActivity(intent);
             }
         });
 
