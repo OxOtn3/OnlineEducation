@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import com.example.onlineeducation.VideoPlayPage.VideoPlayActivity;
 import com.example.onlineeducation.mineFragmentPages.BoughtCoursesPageActivity;
 import com.example.onlineeducation.mineFragmentPages.CoursesOperationPage;
+import com.example.onlineeducation.mineFragmentPages.KeywordPage;
 
 public class MineFragment extends BaseFragment{
 
@@ -29,6 +30,8 @@ public class MineFragment extends BaseFragment{
     private Button boughtCourses;
 
     private Button coursesOperation;
+
+    private TextView keyword;
 
     public MineFragment() {
         this.TAG = "我的";
@@ -64,6 +67,15 @@ public class MineFragment extends BaseFragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), VideoPlayActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
+        keyword = (TextView) mView.findViewById(R.id.keyword);
+        keyword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), KeywordPage.class);
                 v.getContext().startActivity(intent);
             }
         });

@@ -22,9 +22,15 @@ public class CourseIntroductionPageActivity extends Activity {
 
     TextView chapterOne;
 
+    TextView chapterTwo;
+
     ImageView coursePicture;
 
     Button intoTeacherHomepage;
+
+    Button intoCoursesCommentPage;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,6 +67,24 @@ public class CourseIntroductionPageActivity extends Activity {
                 Intent intent = new Intent(v.getContext(), VideoPlayActivity.class);
                 startActivity(intent);
 
+            }
+        });
+
+        intoCoursesCommentPage = (Button) findViewById(R.id.courseIntroJoinDiscussion);
+        intoCoursesCommentPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CoursesCommentPage.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
+        chapterTwo = (TextView) findViewById(R.id.chaoper_two);
+        chapterTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), PaymentPage.class);
+                startActivity(intent);
             }
         });
 

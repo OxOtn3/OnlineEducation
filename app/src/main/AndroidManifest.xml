@@ -26,6 +26,11 @@
         <activity android:name=".momentPage.MomentPage"></activity>
         <activity android:name=".momentUserPage.MomentUserPageActivity"></activity>
         <activity android:name=".mineFragmentPages.CoursesOperationPage"></activity>
+        <activity android:name=".mineFragmentPages.OpenNewCoursesPage"></activity>
+        <activity android:name=".mineFragmentPages.KeywordPage"></activity>
+        <activity android:name=".courseIntroductionPage.CoursesCommentPage"></activity>
+        <activity android:name=".teacherHomepage.TeacherCommentPage"></activity>
+        <activity android:name=".courseIntroductionPage.PaymentPage"></activity>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -14,7 +15,7 @@ import com.example.onlineeducation.courseIntroductionPage.CourseIntroductionPage
 public class TeacherHomepageActivity extends Activity {
     ImageView course1;
 
-
+    Button intoTeacherCommentPage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,6 +29,15 @@ public class TeacherHomepageActivity extends Activity {
                 //打开课程介绍页面
                 Intent intent = new Intent(v.getContext(), CourseIntroductionPageActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        intoTeacherCommentPage = (Button) findViewById(R.id.intoTeacherComment);
+        intoTeacherCommentPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), TeacherCommentPage.class);
+                v.getContext().startActivity(intent);
             }
         });
     }
