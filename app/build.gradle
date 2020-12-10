@@ -43,4 +43,8 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
+    implementation 'com.dou361.dialogui:jjdxm-dialogui:1.0.3'
+
+    implementation 'com.carson_ho:SearchLayout:1.0.1'
+
 }

@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.dou361.dialogui.DialogUIUtils;
+import com.dou361.dialogui.listener.DialogUIItemListener;
 import com.example.onlineeducation.R;
 import com.example.onlineeducation.courseIntroductionPage.CourseIntroductionPageActivity;
 import com.example.onlineeducation.homepage.HomePageVideoAdapter;
@@ -24,7 +26,11 @@ import com.zhpan.indicator.enums.IndicatorStyle;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.dou361.dialogui.DialogUIUtils.showToast;
+
 public class CoursesPageActivity extends Activity {
+
+    int sortSelection = 0;
 
     View mView;
 
@@ -97,15 +103,16 @@ public class CoursesPageActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //排序功能
-                Toast.makeText(CoursesPageActivity.this, "排序功能!", Toast.LENGTH_SHORT).show();
+                String[] sorts = new String[]{"综合","课程评分", "课程访问量", "教师评分"};
+                DialogUIUtils.showSingleChoose(CoursesPageActivity.this, "排序方式", sortSelection, sorts, true, true, new DialogUIItemListener() {
+                    @Override
+                    public void onItemClick(CharSequence text, int position) {
+                        sortSelection = position;
+                        //按照指定方式排序
+                    }
+                }).show();
             }
         });
-
-
-
-
-
-
     }
 
 
