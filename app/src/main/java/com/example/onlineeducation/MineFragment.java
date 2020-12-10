@@ -18,7 +18,7 @@ import com.example.onlineeducation.mineFragmentPages.CoursesOperationPage;
 
 public class MineFragment extends BaseFragment{
 
-    private View mView;
+    private View mView;//
 
     private ViewGroup mContainer;
 
