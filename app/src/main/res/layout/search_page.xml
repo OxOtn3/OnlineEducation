@@ -2,22 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-
-    <SearchView
-        android:id="@+id/classificationSearchView"
+    <scut.carson_ho.searchview.SearchView
+        android:id="@+id/search_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="true"
+        app:textSizeSearch="5dp"
+        app:textColorSearch="#3F51B5"
+        app:textHintSearch="输入查询关键字"
+        app:searchBlockHeight="150"
+        app:searchBlockColor="#ffffff"
         />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
-
 
 </LinearLayout>

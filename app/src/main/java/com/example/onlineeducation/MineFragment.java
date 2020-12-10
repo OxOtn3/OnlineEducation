@@ -19,6 +19,7 @@ import com.example.onlineeducation.mineFragmentPages.KeywordPage;
 
 public class MineFragment extends BaseFragment{
 
+
     private View mView;//
 
     private ViewGroup mContainer;
@@ -32,6 +33,8 @@ public class MineFragment extends BaseFragment{
     private Button coursesOperation;
 
     private TextView keyword;
+
+    private Button signUpTest;
 
     public MineFragment() {
         this.TAG = "我的";
@@ -76,6 +79,15 @@ public class MineFragment extends BaseFragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), KeywordPage.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
+        signUpTest = (Button) mView.findViewById(R.id.signUpTest);
+        signUpTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, SignUpPage.class);
                 v.getContext().startActivity(intent);
             }
         });

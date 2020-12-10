@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,13 +24,16 @@ import com.example.onlineeducation.coursesPage.CoursesPageActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import scut.carson_ho.searchview.ICallBack;
+import scut.carson_ho.searchview.bCallBack;
+
 public class ClassificationFragment extends BaseFragment{
 
     private View mView;
     private ViewGroup mContainer;
     private SearchView searchView;
     private List<ClassificationItem> itemList = new ArrayList<>();
-
+    private scut.carson_ho.searchview.SearchView sv;
 
 
     public ClassificationFragment() {
@@ -47,6 +51,16 @@ public class ClassificationFragment extends BaseFragment{
         recyclerView.setLayoutManager(layoutManager);
         ClassificationItemAdapter adapter = new ClassificationItemAdapter(itemList);
         recyclerView.setAdapter(adapter);
+
+        searchView = (SearchView) mView.findViewById(R.id.classificationSearchView);
+        searchView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mView.getContext(), SearchPage.class);
+                mView.getContext().startActivity(intent);
+            }
+        });
+
         return mView;
     }
 

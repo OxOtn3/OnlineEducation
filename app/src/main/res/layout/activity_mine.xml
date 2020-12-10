@@ -109,6 +109,14 @@
         android:src="@drawable/teacher_homepage_course"
         />
 
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/signUpTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击注册" />
+
+
 
 
 </LinearLayout>

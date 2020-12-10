@@ -31,6 +31,8 @@
         <activity android:name=".courseIntroductionPage.CoursesCommentPage"></activity>
         <activity android:name=".teacherHomepage.TeacherCommentPage"></activity>
         <activity android:name=".courseIntroductionPage.PaymentPage"></activity>
+        <activity android:name=".SearchPage"></activity>
+        <activity android:name=".SignUpPage"></activity>
     </application>
 
 </manifest>

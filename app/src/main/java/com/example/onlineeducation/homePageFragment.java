@@ -39,9 +39,13 @@ public class homePageFragment extends BaseFragment{
     View mView;
     List<HomePageBannerViewItem> bannerViewItemList = new ArrayList<>();
 
+    private RecyclerView recyclerView0;
+
     private List<HomePageMomentsItem> momentsItemList = new ArrayList<>();
 
     private BannerViewPager<HomePageBannerViewItem, NetViewHolder> mViewPager;
+
+    private TextView dttj;
 
     private List<HomePageVideoItem> videoItemsList = new ArrayList<>();
 
@@ -107,20 +111,38 @@ public class homePageFragment extends BaseFragment{
         setUpViewPager();
         mViewPager.setLifecycleRegistry(getLifecycle());
 
-        RecyclerView recyclerView = (RecyclerView) mView.findViewById(R.id.homePageRecyclerView);
+        dttj = (TextView) mView.findViewById(R.id.dongtaituijian);
+
+        recyclerView0 = (RecyclerView) mView.findViewById(R.id.homePageRecyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView0.setLayoutManager(layoutManager);
         HomePageMomentsAdapter momentsAdapter = new HomePageMomentsAdapter(momentsItemList);
-        recyclerView.setAdapter(momentsAdapter);
+        recyclerView0.setAdapter(momentsAdapter);
 
         RecyclerView recyclerView1 = (RecyclerView) mView.findViewById(R.id.homePageRecyclerView2);
         GridLayoutManager layoutManager1 = new GridLayoutManager(mContext, 2);
         recyclerView1.setLayoutManager(layoutManager1);
         HomePageVideoAdapter videoAdapter = new HomePageVideoAdapter(videoItemsList);
         recyclerView1.setAdapter(videoAdapter);
-
-
+        recyclerView1.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if(dy > 0){
+                    mViewPager.setVisibility(View.GONE);
+                    dttj.setVisibility(View.GONE);
+                    //-------------------********---------------------------
+                    //-------------------********---------------------------
+                    //-------------------********---------------------------
+//                    recyclerView0.setVisibility(View.GONE);
+                }else{
+                    mViewPager.setVisibility(View.VISIBLE);
+                    dttj.setVisibility(View.VISIBLE);
+//                    recyclerView0.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
         return mView;
     }
