@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.example.onlineeducation.courseIntroductionPage.CourseIntroductionPageActivity;
 import com.example.onlineeducation.coursesPage.CoursesPageActivity;
 
 public class SearchKeywordPage extends Activity {
