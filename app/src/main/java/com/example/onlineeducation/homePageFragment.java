@@ -7,6 +7,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,11 +43,15 @@ public class homePageFragment extends BaseFragment{
 
     private RecyclerView recyclerView0;
 
-    private List<HomePageMomentsItem> momentsItemList = new ArrayList<>();
+    private ImageView keywordSearch;
+
+//    private List<HomePageMomentsItem> momentsItemList = new ArrayList<>();
 
     private BannerViewPager<HomePageBannerViewItem, NetViewHolder> mViewPager;
 
     private TextView dttj;
+
+    private Button searchByTeacher;
 
     private List<HomePageVideoItem> videoItemsList = new ArrayList<>();
 
@@ -111,14 +117,32 @@ public class homePageFragment extends BaseFragment{
         setUpViewPager();
         mViewPager.setLifecycleRegistry(getLifecycle());
 
-        dttj = (TextView) mView.findViewById(R.id.dongtaituijian);
+//        dttj = (TextView) mView.findViewById(R.id.dongtaituijian);
 
-        recyclerView0 = (RecyclerView) mView.findViewById(R.id.homePageRecyclerView);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
-        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        recyclerView0.setLayoutManager(layoutManager);
-        HomePageMomentsAdapter momentsAdapter = new HomePageMomentsAdapter(momentsItemList);
-        recyclerView0.setAdapter(momentsAdapter);
+        searchByTeacher = (Button) mView.findViewById(R.id.homePageSearchByTeacher);
+        searchByTeacher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, TeachersPage.class);
+                mContext.startActivity(intent);
+            }
+        });
+
+        keywordSearch = (ImageView) mView.findViewById(R.id.homePageKeywordSearch);
+        keywordSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, SearchKeywordPage.class);
+                mContext.startActivity(intent);
+            }
+        });
+
+//        recyclerView0 = (RecyclerView) mView.findViewById(R.id.homePageRecyclerView);
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
+//        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+//        recyclerView0.setLayoutManager(layoutManager);
+//        HomePageMomentsAdapter momentsAdapter = new HomePageMomentsAdapter(momentsItemList);
+//        recyclerView0.setAdapter(momentsAdapter);
 
         RecyclerView recyclerView1 = (RecyclerView) mView.findViewById(R.id.homePageRecyclerView2);
         GridLayoutManager layoutManager1 = new GridLayoutManager(mContext, 2);
@@ -131,14 +155,14 @@ public class homePageFragment extends BaseFragment{
                 super.onScrolled(recyclerView, dx, dy);
                 if(dy > 0){
                     mViewPager.setVisibility(View.GONE);
-                    dttj.setVisibility(View.GONE);
+//                    dttj.setVisibility(View.GONE);
                     //-------------------********---------------------------
                     //-------------------********---------------------------
                     //-------------------********---------------------------
 //                    recyclerView0.setVisibility(View.GONE);
                 }else{
                     mViewPager.setVisibility(View.VISIBLE);
-                    dttj.setVisibility(View.VISIBLE);
+//                    dttj.setVisibility(View.VISIBLE);
 //                    recyclerView0.setVisibility(View.VISIBLE);
                 }
             }
@@ -164,12 +188,12 @@ public class homePageFragment extends BaseFragment{
             bannerViewItemList.add(item2);
         }
 
-        for(int i = 0; i < 5; i++){
-            HomePageMomentsItem tempItem1 = new HomePageMomentsItem(R.drawable.video);
-            momentsItemList.add(tempItem1);
-            HomePageMomentsItem tempItem2 = new HomePageMomentsItem(R.drawable.history);
-            momentsItemList.add(tempItem2);
-        }
+//        for(int i = 0; i < 5; i++){
+//            HomePageMomentsItem tempItem1 = new HomePageMomentsItem(R.drawable.video);
+//            momentsItemList.add(tempItem1);
+//            HomePageMomentsItem tempItem2 = new HomePageMomentsItem(R.drawable.history);
+//            momentsItemList.add(tempItem2);
+//        }
 
         for(int i = 0; i < 5; i++){
             HomePageVideoItem vItem1 = new HomePageVideoItem("history", R.drawable.history);

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/teachersPageImage"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:text="教师图片"
+        android:textSize="15dp"
+        android:background="#829192"
+        android:gravity="center"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="张大山 老师\n教师评分 4.7"
+            android:gravity="center"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:text="教师图片"
+            android:textSize="15dp"
+            android:background="#829192"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="张大山 老师\n教师评分 4.7"
+            android:gravity="center"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:text="教师图片"
+            android:textSize="15dp"
+            android:background="#829192"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="张大山 老师\n教师评分 4.7"
+            android:gravity="center"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:text="教师图片"
+            android:textSize="15dp"
+            android:background="#829192"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="张大山 老师\n教师评分 4.7"
+            android:gravity="center"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:text="教师图片"
+            android:textSize="15dp"
+            android:background="#829192"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="张大山 老师\n教师评分 4.7"
+            android:gravity="center"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:text="教师图片"
+            android:textSize="15dp"
+            android:background="#829192"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="张大山 老师\n教师评分 4.7"
+            android:gravity="center"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
+            />
+
+    </LinearLayout>
+z
+
+</LinearLayout>
+
+</ScrollView>

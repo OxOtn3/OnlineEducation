@@ -33,6 +33,9 @@
         <activity android:name=".courseIntroductionPage.PaymentPage"></activity>
         <activity android:name=".SearchPage"></activity>
         <activity android:name=".SignUpPage"></activity>
+        <activity android:name=".TeachersPage"></activity>
+        <activity android:name=".LivePage"></activity>
+        <activity android:name=".SearchKeywordPage"></activity>
     </application>
 
 </manifest>
