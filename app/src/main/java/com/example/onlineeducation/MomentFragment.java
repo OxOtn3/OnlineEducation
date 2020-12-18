@@ -9,10 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.onlineeducation.VideoPlayPage.VideoPlayActivity;
+import com.example.onlineeducation.courseIntroductionPage.CourseIntroductionPageActivity;
 import com.example.onlineeducation.momentPage.MomentPage;
 import com.example.onlineeducation.momentUserPage.MomentUserPageActivity;
 
@@ -21,12 +24,12 @@ public class MomentFragment extends BaseFragment{
 
     private View mView;
 
-    ImageView moment1;
+    TextView picture;
 
-    ImageView userIcon1;
+    TextView description;
 
     public MomentFragment() {
-        this.TAG = "动态";
+        this.TAG = "直播";
     }
 
 
@@ -34,27 +37,26 @@ public class MomentFragment extends BaseFragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.activity_moment, container, false);
+        mView = inflater.inflate(R.layout.activity_live, container, false);
         initData();
 
-        moment1 = (ImageView) mView.findViewById(R.id.moment1);
-        moment1.setOnClickListener(new View.OnClickListener() {
+        picture = (TextView) mView.findViewById(R.id.livePic);
+        picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mView.getContext(), MomentPage.class);
-                v.getContext().startActivity(intent);
+                Intent intent = new Intent(mContext, LivePage.class);
+                mContext.startActivity(intent);
             }
         });
 
-        userIcon1 = (ImageView) mView.findViewById(R.id.moment_user_icon1);
-        userIcon1.setOnClickListener(new View.OnClickListener() {
+        description = (TextView) mView.findViewById(R.id.liveDes);
+        description.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mView.getContext(), MomentUserPageActivity.class);
-                mView.getContext().startActivity(intent);
+                Intent intent = new Intent(mContext, CourseIntroductionPageActivity.class);
+                mContext.startActivity(intent);
             }
         });
-
         return mView;
 
     }
@@ -69,4 +71,6 @@ public class MomentFragment extends BaseFragment{
     protected void initData() {
         super.initData();
     }
+
+
 }

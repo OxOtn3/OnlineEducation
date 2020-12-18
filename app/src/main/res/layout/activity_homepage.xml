@@ -3,14 +3,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <SearchView
-        android:id="@+id/homePageSearchView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/homePageSearchView"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            />
+
+        <Button
+            android:id="@+id/homePageSearchByTeacher"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="查询老师"
+            />
+
+        <ImageView
+            android:id="@+id/homePageKeywordSearch"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@drawable/sort_icon"/>
+
+    </LinearLayout>
+
 
     <com.zhpan.bannerview.BannerViewPager
         android:id="@+id/homePageBannerView"
@@ -18,19 +47,19 @@
         android:layout_margin="10dp"
         android:layout_height="120dp" />
 
-    <TextView
-        android:id="@+id/dongtaituijian"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="动态推荐"
-        android:textSize="20dp"
-        android:textColor="#000000" />
+<!--    <TextView-->
+<!--        android:id="@+id/dongtaituijian"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="动态推荐"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textColor="#000000" />-->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/homePageRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"/>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/homePageRecyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"/>-->
 
 
     <TextView

@@ -13,9 +13,6 @@
         android:layout_weight="1">
 
 
-
-
-
     </FrameLayout>
 
     <RadioGroup
@@ -41,7 +38,7 @@
             android:id="@+id/moments"
             style="@style/bottom_tag_style"
 
-            android:text="动态" />
+            android:text="直播" />
         <RadioButton
             android:id="@+id/mine"
             style="@style/bottom_tag_style"
