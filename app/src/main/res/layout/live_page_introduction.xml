@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="      主讲教师：张大山\n    《财政学》：也称《政府经济学》，它是经济学中的一个分支。其研究对象是政府经济行为的规律。它主要回答政府为什么要介入人们的经济生活、是怎样介入、介入之后对人们的经济行为会产生什么样的影响以及应该怎样介入等基本问题。它通常包括基础理论、财政支出、财政收入、财政政策和财政体制等四个方面的内容。财政学是财经类专业的学生必修的专业基础课程之一。"
+        />
+
+</LinearLayout>

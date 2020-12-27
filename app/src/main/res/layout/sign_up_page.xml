@@ -6,6 +6,35 @@
 
     <include layout="@layout/titlebar" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择注册账号类型："
+        android:textSize="16dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/stuOrTea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/signUpAsStu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学生用户"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/signUpAsTea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="教师用户"/>
+
+    </RadioGroup>
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
@@ -13,9 +42,12 @@
         >
 
         <EditText
+            android:id="@+id/signUpPagePhone"
+            android:maxLength="11"
             android:layout_gravity="center"
             android:layout_width="300dp"
             android:layout_height="60dp"
+            android:inputType="number"
             android:hint="请输入手机号码"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -27,14 +59,18 @@
         >
 
         <EditText
+            android:id="@+id/signUpPageVeriCode"
             android:layout_gravity="center"
             android:layout_width="300dp"
             android:layout_height="60dp"
+            android:inputType="number"
+            android:maxLength="4"
             android:hint="请输入验证码"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/signUpPageSendVeriCode"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:layout_width="300dp"
@@ -42,6 +78,7 @@
         android:text="发送验证码" />
 
     <Button
+        android:id="@+id/signUpPageSignIn"
         android:layout_gravity="center"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
