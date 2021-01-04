@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.onlineeducation.R;
 import com.example.onlineeducation.VideoPlayPage.VideoPlayActivity;
+import com.example.onlineeducation.classification.ClassificationItem;
 
 import java.util.List;
 
@@ -62,6 +63,8 @@ public class HomePageVideoAdapter extends RecyclerView.Adapter<HomePageVideoAdap
         HomePageVideoItem videoItem = videoItemList.get(position);
         holder.videoImage.setImageResource(videoItem.getImageId());
         holder.videoName.setText(videoItem.getName());
+
+
     }
 
     @Override

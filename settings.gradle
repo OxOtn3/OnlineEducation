@@ -1,2 +1,3 @@
+include ':vitamio'
 include ':app'
 rootProject.name = "OnlineEducation"

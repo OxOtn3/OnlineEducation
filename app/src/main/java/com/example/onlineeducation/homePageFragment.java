@@ -1,9 +1,7 @@
 package com.example.onlineeducation;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +15,8 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.onlineeducation.VideoPlayPage.VideoPlayActivity;
-import com.example.onlineeducation.classification.ClassificationItemAdapter;
 import com.example.onlineeducation.courseIntroductionPage.CourseIntroductionPageActivity;
 import com.example.onlineeducation.homepage.HomeAdapter;
 import com.example.onlineeducation.homepage.HomePageBannerViewItem;
@@ -45,7 +40,7 @@ public class homePageFragment extends BaseFragment{
 
     private ImageView keywordSearch;
 
-//    private List<HomePageMomentsItem> momentsItemList = new ArrayList<>();
+    private List<HomePageMomentsItem> momentsItemList = new ArrayList<>();
 
     private BannerViewPager<HomePageBannerViewItem, NetViewHolder> mViewPager;
 
@@ -119,14 +114,14 @@ public class homePageFragment extends BaseFragment{
 
 //        dttj = (TextView) mView.findViewById(R.id.dongtaituijian);
 
-        searchByTeacher = (Button) mView.findViewById(R.id.homePageSearchByTeacher);
-        searchByTeacher.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, TeachersPage.class);
-                mContext.startActivity(intent);
-            }
-        });
+//        searchByTeacher = (Button) mView.findViewById(R.id.homePageSearchByTeacher);
+//        searchByTeacher.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(mContext, TeachersPage.class);
+//                mContext.startActivity(intent);
+//            }
+//        });
 
         keywordSearch = (ImageView) mView.findViewById(R.id.homePageKeywordSearch);
         keywordSearch.setOnClickListener(new View.OnClickListener() {
@@ -137,12 +132,12 @@ public class homePageFragment extends BaseFragment{
             }
         });
 
-//        recyclerView0 = (RecyclerView) mView.findViewById(R.id.homePageRecyclerView);
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
-//        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-//        recyclerView0.setLayoutManager(layoutManager);
-//        HomePageMomentsAdapter momentsAdapter = new HomePageMomentsAdapter(momentsItemList);
-//        recyclerView0.setAdapter(momentsAdapter);
+        recyclerView0 = (RecyclerView) mView.findViewById(R.id.homePageRecyclerView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recyclerView0.setLayoutManager(layoutManager);
+        HomePageMomentsAdapter momentsAdapter = new HomePageMomentsAdapter(momentsItemList);
+        recyclerView0.setAdapter(momentsAdapter);
 
         RecyclerView recyclerView1 = (RecyclerView) mView.findViewById(R.id.homePageRecyclerView2);
         GridLayoutManager layoutManager1 = new GridLayoutManager(mContext, 2);
@@ -181,27 +176,39 @@ public class homePageFragment extends BaseFragment{
     protected void initData() {
         super.initData();
 
-        for(int i = 0; i < 2; i++){
-            HomePageBannerViewItem item1 = new HomePageBannerViewItem(R.drawable.history, "ad1");
+        for(int i = 0; i < 1; i++){
+            HomePageBannerViewItem item1 = new HomePageBannerViewItem(R.drawable.ad01, "ad1");
             bannerViewItemList.add(item1);
-            HomePageBannerViewItem item2 = new HomePageBannerViewItem(R.drawable.photography, "ad2");
+            HomePageBannerViewItem item2 = new HomePageBannerViewItem(R.drawable.ad2, "ad2");
             bannerViewItemList.add(item2);
+            HomePageBannerViewItem item3 = new HomePageBannerViewItem(R.drawable.ad03, "ad3");
+            bannerViewItemList.add(item3);
+            HomePageBannerViewItem item4 = new HomePageBannerViewItem(R.drawable.ad4, "ad4");
+            bannerViewItemList.add(item4);
         }
 
-//        for(int i = 0; i < 5; i++){
-//            HomePageMomentsItem tempItem1 = new HomePageMomentsItem(R.drawable.video);
-//            momentsItemList.add(tempItem1);
-//            HomePageMomentsItem tempItem2 = new HomePageMomentsItem(R.drawable.history);
-//            momentsItemList.add(tempItem2);
-//        }
-
         for(int i = 0; i < 5; i++){
-            HomePageVideoItem vItem1 = new HomePageVideoItem("history", R.drawable.history);
+            HomePageMomentsItem tempItem1 = new HomePageMomentsItem(R.drawable.video);
+            momentsItemList.add(tempItem1);
+            HomePageMomentsItem tempItem2 = new HomePageMomentsItem(R.drawable.history);
+            momentsItemList.add(tempItem2);
+        }
+
+        for(int i = 0; i < 3; i++){
+            HomePageVideoItem vItem1 = new HomePageVideoItem("电气工程基础(上)", R.drawable.c01);
             videoItemsList.add(vItem1);
-            HomePageVideoItem vItem2 = new HomePageVideoItem("photography", R.drawable.photography);
+            HomePageVideoItem vItem2 = new HomePageVideoItem("工程电磁场", R.drawable.c02);
             videoItemsList.add(vItem2);
-            HomePageVideoItem vItem3 = new HomePageVideoItem("video", R.drawable.video);
+            HomePageVideoItem vItem3 = new HomePageVideoItem("逻辑学导论", R.drawable.c03);
             videoItemsList.add(vItem3);
+            HomePageVideoItem vItem4 = new HomePageVideoItem("模拟电子技术基础", R.drawable.c04);
+            videoItemsList.add(vItem4);
+            HomePageVideoItem vItem5 = new HomePageVideoItem("数据分析", R.drawable.c05);
+            videoItemsList.add(vItem5);
+            HomePageVideoItem vItem6 = new HomePageVideoItem("微信小程序开发", R.drawable.c06);
+            videoItemsList.add(vItem6);
+            HomePageVideoItem vItem7 = new HomePageVideoItem("Java程序设计", R.drawable.c07);
+            videoItemsList.add(vItem7);
 
         }
     }

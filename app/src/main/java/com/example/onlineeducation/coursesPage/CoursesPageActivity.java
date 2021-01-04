@@ -126,21 +126,33 @@ public class CoursesPageActivity extends Activity {
 
 
     private void initData() {
-        for(int i = 0; i < 2; i++){
-            coursesPageBannerViewItem item1 = new coursesPageBannerViewItem(R.drawable.photography, "ad1");
+        for(int i = 0; i < 1; i++){
+            coursesPageBannerViewItem item1 = new coursesPageBannerViewItem(R.drawable.ad2, "ad1");
             bannerViewItemList.add(item1);
-            coursesPageBannerViewItem item2 = new coursesPageBannerViewItem(R.drawable.photography, "ad2");
+            coursesPageBannerViewItem item2 = new coursesPageBannerViewItem(R.drawable.ad03, "ad2");
             bannerViewItemList.add(item2);
+            coursesPageBannerViewItem item3 = new coursesPageBannerViewItem(R.drawable.ad01, "ad2");
+            bannerViewItemList.add(item3);
+            coursesPageBannerViewItem item4 = new coursesPageBannerViewItem(R.drawable.ad4, "ad2");
+            bannerViewItemList.add(item4);
         }
 
 
-        for(int i = 0; i < 5; i++){
-            CoursesPageVideoItem vItem1 = new CoursesPageVideoItem("history", R.drawable.history, "history\n李四四 老师 \n教师评分4.0");
+        for(int i = 0; i < 2; i++){
+            CoursesPageVideoItem vItem1 = new CoursesPageVideoItem("history", R.drawable.c04, "模拟电子技术基础\n李四四 老师 \n教师评分4.3");
             videoItemsList.add(vItem1);
-            CoursesPageVideoItem vItem2 = new CoursesPageVideoItem("photography", R.drawable.photography, "photography\n张三 老师 \n教师评分4.7");
+            CoursesPageVideoItem vItem2 = new CoursesPageVideoItem("photography", R.drawable.c03, "逻辑学导论\n张山 老师 \n教师评分4.7");
             videoItemsList.add(vItem2);
-            CoursesPageVideoItem vItem3 = new CoursesPageVideoItem("video", R.drawable.video, "video\n王五 老师 \n教师评分4.6");
+            CoursesPageVideoItem vItem3 = new CoursesPageVideoItem("video", R.drawable.c01, "电气工程基础(上)\n李凯明 老师 \n教师评分4.6");
             videoItemsList.add(vItem3);
+            CoursesPageVideoItem vItem4 = new CoursesPageVideoItem("video", R.drawable.c02, "工程电磁场\n李乌 老师 \n教师评分4.6");
+            videoItemsList.add(vItem4);
+            CoursesPageVideoItem vItem5 = new CoursesPageVideoItem("video", R.drawable.c06, "微信小程序开发\n丁海 老师 \n教师评分4.8");
+            videoItemsList.add(vItem5);
+            CoursesPageVideoItem vItem6 = new CoursesPageVideoItem("video", R.drawable.c07, "Java程序设计\n王凯 老师 \n教师评分4.7");
+            videoItemsList.add(vItem6);
+            CoursesPageVideoItem vItem7 = new CoursesPageVideoItem("video", R.drawable.c05, "Python数据分析\n张磊磊 老师 \n教师评分4.9");
+            videoItemsList.add(vItem7);
 
         }
 

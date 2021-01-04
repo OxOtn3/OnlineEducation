@@ -14,22 +14,32 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.dou361.dialogui.DialogUIUtils;
+import com.dou361.dialogui.listener.DialogUIItemListener;
 import com.example.onlineeducation.VideoPlayPage.VideoPlayActivity;
 import com.example.onlineeducation.courseIntroductionPage.CourseIntroductionPageActivity;
+import com.example.onlineeducation.coursesPage.CoursesPageActivity;
 import com.example.onlineeducation.momentPage.MomentPage;
 import com.example.onlineeducation.momentUserPage.MomentUserPageActivity;
+import com.example.onlineeducation.teacherHomepage.TeacherHomepageActivity;
 
 public class MomentFragment extends BaseFragment{
     private TextView textView;
 
     private View mView;
 
+    int sortSelection = 0;
+
     TextView picture;
 
     TextView description;
 
+    TextView image;
+
+    ImageView sortIcon;
+
     public MomentFragment() {
-        this.TAG = "直播";
+        this.TAG = "教师";
     }
 
 
@@ -37,26 +47,55 @@ public class MomentFragment extends BaseFragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.activity_live, container, false);
+        mView = inflater.inflate(R.layout.teachers_page, container, false);
         initData();
 
-        picture = (TextView) mView.findViewById(R.id.livePic);
-        picture.setOnClickListener(new View.OnClickListener() {
+
+        image = (TextView) mView.findViewById(R.id.teachersPageImage);
+        image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, LivePage.class);
-                mContext.startActivity(intent);
+                Intent intent = new Intent(v.getContext(), TeacherHomepageActivity.class);
+                startActivity(intent);
             }
         });
 
-        description = (TextView) mView.findViewById(R.id.liveDes);
-        description.setOnClickListener(new View.OnClickListener() {
+        sortIcon = (ImageView) mView.findViewById(R.id.teacherPageSortIcon);
+        sortIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, CourseIntroductionPageActivity.class);
-                mContext.startActivity(intent);
+                //排序功能
+                String[] sorts = new String[]{"综合","教学评分", "课程访问量", "课程评分"};
+                DialogUIUtils.showSingleChoose(getActivity(), "排序方式", sortSelection, sorts, true, true, new DialogUIItemListener() {
+                    @Override
+                    public void onItemClick(CharSequence text, int position) {
+                        sortSelection = position;
+                        //按照指定方式排序
+                    }
+                }).show();
             }
         });
+
+
+
+
+//        picture = (TextView) mView.findViewById(R.id.livePic);
+//        picture.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(mContext, LivePage.class);
+//                mContext.startActivity(intent);
+//            }
+//        });
+
+//        description = (TextView) mView.findViewById(R.id.liveDes);
+//        description.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(mContext, CourseIntroductionPageActivity.class);
+//                mContext.startActivity(intent);
+//            }
+//        });
         return mView;
 
     }

@@ -21,6 +21,7 @@
         />
 
     <Button
+        android:background="@drawable/button_drawable"
         android:layout_marginRight="20dp"
         android:layout_gravity="right"
         android:layout_width="wrap_content"

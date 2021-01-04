@@ -3,11 +3,14 @@ package com.example.onlineeducation;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +19,14 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.ArrayList;
+
+import cn.nodemedia.NodePlayer;
+import cn.nodemedia.NodePlayerView;
+import io.vov.vitamio.LibsChecker;
+import io.vov.vitamio.MediaPlayer;
+import io.vov.vitamio.Vitamio;
+import io.vov.vitamio.widget.MediaController;
+import io.vov.vitamio.widget.VideoView;
 
 public class LivePage extends Activity {
 
@@ -31,10 +42,52 @@ public class LivePage extends Activity {
 
     Button send;
 
+    NodePlayer nodePlayer;
+
+    NodePlayerView nodePlayerView;
+
+    SurfaceView surfaceView;
+
+    SurfaceHolder surfaceHolder;
+
+//    VideoView videoView = null;
+
+    String path;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        if (!LibsChecker.checkVitamioLibs(this)) {
+//            Toast.makeText(LivePage.this, "Vitamio未初始化", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+
         setContentView(R.layout.live_page);
+
+//        surfaceView = (SurfaceView) findViewById(R.id.surface);
+//        surfaceHolder = surfaceView.getHolder();
+//        surfaceHolder.addCallback(this);
+
+
+
+//        Vitamio.isInitialized(this);
+
+
+
+//        videoView = (VideoView) findViewById(R.id.video_view_vitamio);
+//        path = "rtmp://47.102.122.250:9000/rtmplive/12345";  //rtmp地址
+//        videoView.setVideoPath(path);
+//        videoView.setMediaController(new MediaController(this));
+//        videoView.requestFocus();
+//
+//        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//            @Override
+//            public void onPrepared(MediaPlayer mp) {
+//                mp.setPlaybackSpeed(1.0f);
+//            }
+//        });
+
 
 
         LayoutInflater lf = getLayoutInflater().from(this);

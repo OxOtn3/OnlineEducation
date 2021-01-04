@@ -35,7 +35,7 @@ public class HomePageMomentsAdapter extends RecyclerView.Adapter<HomePageMoments
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
                 //点击事件
-                Toast.makeText(v.getContext(), "动态推荐position为" + position + " 的点击事件", Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), "作业墙position为" + position + " 的点击事件", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(v.getContext(), MomentPage.class);
                 v.getContext().startActivity(intent);

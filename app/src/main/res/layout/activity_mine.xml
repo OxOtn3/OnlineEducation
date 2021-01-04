@@ -55,6 +55,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="105dp"
             android:layout_marginEnd="17dp"
+            android:background="@drawable/button_drawable"
             android:text="已购买的课程"
             android:textSize="10dp" />
 
@@ -68,6 +69,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="17dp"
+            android:background="@drawable/button_drawable"
             android:text="课程操作(仅教师用户)"
             android:textSize="8dp" />
 
@@ -97,21 +99,16 @@
     <ImageView
         android:layout_marginTop="20dp"
         android:id="@+id/mine_page_course1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:src="@drawable/teacher_homepage_course"
+        android:src="@drawable/ing01"
         />
 
-    <ImageView
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/teacher_homepage_course"
-        />
 
     <Button
         android:layout_gravity="center"
         android:id="@+id/signUpTest"
+        android:background="@drawable/button_drawable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="点击注册" />

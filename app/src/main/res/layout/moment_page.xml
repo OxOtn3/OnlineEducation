@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar"/>
 
 
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="10dp"
+        app:contentPadding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        >
     <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
@@ -24,7 +41,7 @@
             android:layout_marginTop="14dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="无敌小学生"
+            android:text="凯鲁亚克"
             android:textSize="22dp"
             />
 
@@ -32,24 +49,23 @@
     </LinearLayout>
 
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="君不见，黄河之水天上来，奔流到海不复回。\n
-君不见，高堂明镜悲白发，朝如青丝暮成雪。\n
-人生得意须尽欢，莫使金樽空对月。\n
-天生我材必有用，千金散尽还复来。\n
-烹羊宰牛且为乐，会须一饮三百杯。\n
-岑夫子，丹丘生，将进酒，杯莫停。\n
-与君歌一曲，请君为我倾耳听。\n
-钟鼓馔玉不足贵，但愿长醉不愿醒。\n
-古来圣贤皆寂寞，惟有饮者留其名。\n
-陈王昔时宴平乐，斗酒十千恣欢谑。\n
-主人何为言少钱，径须沽取对君酌。\n
-五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。\n"
+        android:text="实践是检验真理的唯一标准,这主要是因为（  ）\n
+A、实践具有把主观和客观联系起来的特性\n
+B、实践是一个无限发展的过程\n
+C、实践是人类生存和发展的基础\n
+D、实践是认识的来源和目的\n
+\n
+答案：A\n
+(分析：B直接错,实践不是是无限过程；C这句话没错,但与检验真理没有联系.D,错误.因为认识可以脱离现实及实践等因素仍然可以存在.例如信仰的认识,上帝的认识,都不是从实践来的,但这些都是人类目前存在的不可否认的认识,因此实践不能作为认识的唯一来源.那么准确的就是A答案.真理是以主观意识形态存在之后,用实践验证它,那么就是把客观联系起来了.因此A答案是最准确的.）
+\n"
         />
+
+    </androidx.cardview.widget.CardView>
 
 
     <LinearLayout
@@ -58,15 +74,11 @@
         android:orientation="horizontal"
         android:gravity="right">
 
-        <Button
-            android:text="转发"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
 
         <Button
             android:layout_marginLeft="10dp"
             android:text="评论"
+            android:background="@drawable/button_drawable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
@@ -74,6 +86,7 @@
         <Button
             android:layout_marginLeft="10dp"
             android:text="点赞"
+            android:background="@drawable/button_drawable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
@@ -85,14 +98,15 @@
     </LinearLayout>
 
     <TextView
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="评论"
-        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:background="#5790AE"
+        android:text="评论区"
         android:textSize="20dp"
-        android:background="#BABABA"
-        />
+        android:textColor="#000000"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"/>
 
 
     <LinearLayout
@@ -112,7 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="大学生小明\n好诗！好诗！"
+            android:text="小明同学\n思路很清晰！受教了！"
             />
 
 
@@ -120,3 +134,4 @@
 
 
 </LinearLayout>
+</ScrollView>

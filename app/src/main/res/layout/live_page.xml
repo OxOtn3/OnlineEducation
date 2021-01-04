@@ -4,12 +4,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+<!--    <cn.nodemedia.NodePlayerView-->
+<!--        android:id="@+id/play_surface"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="260dp"-->
+<!--        />-->
+    
+    <SurfaceView
+        android:id="@+id/surface"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:text="直播流"
-        android:gravity="center"
-        android:background="#144973"/>
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        />
+
+
 
 
 

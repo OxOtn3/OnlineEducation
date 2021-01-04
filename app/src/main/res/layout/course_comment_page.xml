@@ -7,6 +7,7 @@
     <include layout="@layout/titlebar" />
 
     <RatingBar
+        android:layout_marginTop="80dp"
         android:layout_gravity="center"
         android:id="@+id/rgb_ping"
         android:layout_width="wrap_content"
@@ -23,6 +24,7 @@
         />
 
     <Button
+        android:background="@drawable/button_drawable"
         android:layout_marginRight="20dp"
         android:layout_gravity="right"
         android:layout_width="wrap_content"

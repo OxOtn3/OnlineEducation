@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/titlebar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/teacherPageSearchView"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            />
+
+        <ImageView
+            android:id="@+id/teacherPageSortIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sort_icon"
+            />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,191 +38,276 @@
 
     <TextView
         android:id="@+id/teachersPageImage"
-        android:layout_width="150dp"
+        android:layout_width="180dp"
         android:layout_height="120dp"
-        android:text="教师图片"
-        android:textSize="15dp"
-        android:background="#829192"
+        android:background="@drawable/t01"
         android:gravity="center"
         />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="张大山 老师\n教师评分 4.7"
-            android:gravity="center"
-            android:textSize="20dp"
-            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            >
 
         <TextView
             android:layout_marginLeft="10dp"
+            android:textSize="12dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="张山 老师\n教学评分 4.7\n线性代数           4.8分\n离散数学           4.6分"
             />
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="150dp"
+
+            android:layout_width="180dp"
             android:layout_height="120dp"
-            android:text="教师图片"
-            android:textSize="15dp"
-            android:background="#829192"
+            android:background="@drawable/t02"
             android:gravity="center"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="张大山 老师\n教师评分 4.7"
-            android:gravity="center"
-            android:textSize="20dp"
-            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="李雪娟 老师\n教学评分 4.8\n行为心理学        4.8分\n情商密码            4.9分\n"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
+
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:background="@drawable/t03"
+            android:gravity="center"
             />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="陈慧敏 老师\n教学评分 4.7\n钢琴入门(一)       4.8分\n钢琴入门(二)       4.8分\n"
+                />
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="150dp"
+
+            android:layout_width="180dp"
             android:layout_height="120dp"
-            android:text="教师图片"
-            android:textSize="15dp"
-            android:background="#829192"
+            android:background="@drawable/t04"
             android:gravity="center"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="张大山 老师\n教师评分 4.7"
-            android:gravity="center"
-            android:textSize="20dp"
-            />
 
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
-            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="马志刚 老师\n教学评分 4.9\nJava程序设计      4.8分\nJava高级             4.7分\n"
+                />
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="150dp"
+
+            android:layout_width="180dp"
             android:layout_height="120dp"
-            android:text="教师图片"
-            android:textSize="15dp"
-            android:background="#829192"
+            android:background="@drawable/t05"
             android:gravity="center"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="张大山 老师\n教师评分 4.7"
-            android:gravity="center"
-            android:textSize="20dp"
-            />
 
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
-            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="李幸 老师\n教学评分 4.9\n高等数学(一)       4.8分\n高等数学(二)       4.8分\n"
+                />
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="150dp"
+
+            android:layout_width="180dp"
             android:layout_height="120dp"
-            android:text="教师图片"
-            android:textSize="15dp"
-            android:background="#829192"
+            android:background="@drawable/t06"
             android:gravity="center"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="张大山 老师\n教师评分 4.7"
-            android:gravity="center"
-            android:textSize="20dp"
-            />
 
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
-            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="陈慧敏 老师\n教学评分 4.8\n手机摄影             4.8分\n摄影学原理          4.5分\n"
+                />
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="150dp"
+
+            android:layout_width="180dp"
             android:layout_height="120dp"
-            android:text="教师图片"
-            android:textSize="15dp"
-            android:background="#829192"
+            android:background="@drawable/t07"
             android:gravity="center"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="张大山 老师\n教师评分 4.7"
-            android:gravity="center"
-            android:textSize="20dp"
-            />
 
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="开设课程:\n\n 线性代数           4.8分\nJava程序设计   4.9分\n离散数学            4.6分"
-            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="陈雳 老师\n教学评分 4.8\n财政学                 4.8分\n生活中的经济学  4.8分\n"
+                />
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
-z
 
 </LinearLayout>
 

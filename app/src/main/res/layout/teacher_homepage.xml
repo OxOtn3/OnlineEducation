@@ -3,21 +3,21 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/user_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/tea"
             android:layout_marginTop="200dp"
             android:layout_marginLeft="30dp"
             />
@@ -29,8 +29,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="259dp"
             android:layout_marginEnd="225dp"
-            android:background="#928128"
-            android:text="  金融  " />
+            android:background="#82CDFF"
+            android:text="  数学  " />
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,8 +39,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="259dp"
             android:layout_marginEnd="174dp"
-            android:background="#928128"
-            android:text="  数学  " />
+            android:background="#82CDFF"
+            android:text="  物理  " />
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="210dp"
             android:layout_marginEnd="140dp"
-            android:text="张三 老师"
+            android:text="张山 老师"
             android:textSize="30dp" />
 
         <TextView
@@ -60,50 +60,83 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="218dp"
             android:layout_marginEnd="37dp"
-            android:text="教师评分 4.8" />
+            android:text="教师评分 4.7" />
+
+        <Button
+            android:id="@+id/intoTeacherComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="right"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/button_drawable"
+            android:text="我要评价" />
+
     </RelativeLayout>
 
 
 
 
     <TextView
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:background="#5790AE"
         android:text="开设课程"
-        android:gravity="center"
         android:textSize="20dp"
-        android:background="#BABABA"
-        />
+        android:textColor="#000000"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="10dp"
+        app:contentPadding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
 
     <ImageView
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/teacher_homepage_course"
+        android:src="@drawable/ing02"
         android:id="@+id/teacher_homepage_course1"
 
         />
 
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="学生评价"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:background="#BABABA"
-        />
+    </androidx.cardview.widget.CardView>
+
 
     <Button
-        android:id="@+id/intoTeacherComment"
-        android:layout_width="wrap_content"
+        android:id="@+id/intoLive"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="我要评价"
-        android:layout_gravity="right"
-        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_drawable"
+        android:text="观看课程直播"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:background="#5790AE"
+        android:text="学生评价"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"/>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"

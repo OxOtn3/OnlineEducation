@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 
+import com.example.onlineeducation.LivePage;
 import com.example.onlineeducation.R;
 import com.example.onlineeducation.courseIntroductionPage.CourseIntroductionPageActivity;
 
@@ -16,6 +17,8 @@ public class TeacherHomepageActivity extends Activity {
     ImageView course1;
 
     Button intoTeacherCommentPage;
+
+    Button intoLive;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,5 +43,18 @@ public class TeacherHomepageActivity extends Activity {
                 v.getContext().startActivity(intent);
             }
         });
+
+        intoLive = (Button)findViewById(R.id.intoLive);
+        intoLive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), LivePage.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
 }
